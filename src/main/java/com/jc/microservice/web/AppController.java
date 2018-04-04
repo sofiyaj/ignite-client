@@ -30,8 +30,8 @@ public class AppController {
     @RequestMapping("/get")
     @ResponseBody
     public String put(int key){
-        appService.get(key);
-        return "ok";
+        String data = appService.get(key);
+        return "get data is [" + data +"] succeed!";
     }
     @RequestMapping("/put")
     @ResponseBody
